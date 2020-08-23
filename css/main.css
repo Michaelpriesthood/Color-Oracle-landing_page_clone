@@ -1,0 +1,166 @@
+*{
+  box-sizing: border-box;  
+}
+
+body{
+    background: #0a76913a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav{
+  width: 100%;  
+  height: 80px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;  
+    line-height: 80px;
+}
+
+nav ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    line-height: 80px;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav a{
+    color: #141212;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 7px 13px;
+    font-weight: bold; 
+    transition: all .5s ease-in-out;
+}
+
+nav a:hover,
+nav a.current{    
+    background: #fff;
+    border-radius: 10px;
+    border-bottom: 2px solid blue;   
+}
+
+.info{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.info p{
+    max-width: 600px;
+    line-height: 1.6rem;
+    margin: auto;
+    margin-bottom: 50px;
+    
+}
+
+#boxes{    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 70%;
+    text-align: center;
+    margin: auto;
+
+}
+
+#boxes .box{
+    width: 90%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0 #000;
+}
+
+#boxes .box .btn{
+    display: block;
+    margin: 20px auto 0;
+    background: inherit; 
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16.5px;
+    outline: none;
+}
+
+#boxes .box .btn-primary{
+    background: #3b5998;
+    color: #fff;
+    
+}
+
+#boxes img{
+    height: 60px;
+    width: 60px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    max-width: 90%;
+    margin: 100px auto 50px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 30px 100px;
+}
+
+
+
+@media (max-width:950px){
+    #boxes, footer{    
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 80%;    
+    }
+
+    #boxes .box{
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width:550px){
+
+    .logo{  
+        line-height: 50px;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    nav ul{
+        line-height: 50px;
+        margin-bottom: 35px;
+    }
+
+    .info p{
+        margin-bottom: 0;        
+    }
+
+    #boxes .box, footer{
+        padding:20px;
+
+    }
+
+    #boxes .box .btn{
+        padding: 5px;
+    }
+
+
+
+    
+}
+
+
+
